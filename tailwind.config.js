@@ -11,9 +11,9 @@ export default {
         width:1536,
       },
       colors: {
-        primary: "#FFFFFF",
-        secandari: "#000000",
-        brand: "#32375C",
+        primary: "#333333",
+        secandari: "#B88E2F",
+        brand: "#FFFFFF",
         navegrey: "#244255",
       },
       fontFamily: {

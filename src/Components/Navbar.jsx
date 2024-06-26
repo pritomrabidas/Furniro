@@ -43,13 +43,13 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-slate-50 shadow-md ">
+    <div className="bg-slate-50 shadow-md w-full fixed">
       <div className="container py-5 flex justify-between items-center cursor-default relative ">
         <div className="">
           <img src="logo.png" alt="" className="w-40 h-10 rounded-lg" />
         </div>
         <div className=" mx-auto">
-          <ul className="flex gap-10 text-2xl font-medium font-['poetsen'] cursor-pointer ">
+          <ul className="flex gap-10 text-xl font-medium font-['poetsen'] cursor-pointer ">
             <Link to="/">
               <li
                 onClick={HandleHome}
