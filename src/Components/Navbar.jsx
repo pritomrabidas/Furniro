@@ -43,7 +43,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-slate-50 shadow-md w-full fixed">
+    <div className="bg-slate-50 shadow-sm w-full fixed">
       <div className="container py-5 flex justify-between items-center cursor-default relative ">
         <div className="">
           <img src="logo.png" alt="" className="w-40 h-10 rounded-lg" />

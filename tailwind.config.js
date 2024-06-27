@@ -14,7 +14,7 @@ export default {
         primary: "#333333",
         secandari: "#B88E2F",
         brand: "#FFFFFF",
-        navegrey: "#244255",
+        navegrey: "#3A3A3A",
       },
       fontFamily: {
         nunitoFont: ["Nunito", "sans-serif"],
