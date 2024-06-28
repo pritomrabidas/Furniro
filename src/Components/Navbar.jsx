@@ -44,12 +44,12 @@ const Navbar = () => {
 
   return (
     <div className="bg-slate-50 shadow-sm w-full fixed z-20">
-      <div className="container py-5 flex justify-between items-center cursor-default relative ">
+      <div className="container py-5 px-2 flex justify-between items-center cursor-default relative ">
         <div className="">
-          <img src="logo.png" alt="" className="w-40 h-10 rounded-lg" />
+          <img src="logo.png" alt="" className="w-24 xl:w-40 lg:w-36 md:w-32 sm:w-28 h-6 xl:h-10 lg:h-9 md:h-8 sm:h-7 rounded-lg" />
         </div>
-        <div className=" mx-auto">
-          <ul className="flex gap-10 text-xl font-medium font-['poetsen'] cursor-pointer ">
+        <div className=" mx-auto  xl:block lg:block md:hidden sm:hidden hidden">
+          <ul className="flex gap-10 xl:gap-10 lg:gap-9 text-xl xl:text-xl lg:text-[18px] font-medium font-['poetsen'] cursor-pointer">
             <Link to="/">
               <li
                 onClick={HandleHome}
@@ -74,12 +74,12 @@ const Navbar = () => {
               onClick={HandleContact}
               className={`${contact ? "text-blue-500" : "text-slate-800"}`}
             >
-              contact
+              Contact
             </li>
           </ul>
         </div>
-        <div className="">
-            <ul className="flex text-2xl gap-9 pr-10">
+        <div className=" md:justify-center sm:justify-center justify-center">
+            <ul className="flex xl:flex text-base xl:text-2xl lg:text-[22px] md:text-xl sm:text-[18px] gap-8 xl:gap-9 lg:gap-8 md:gap-8 sm:gap-8 pr-10 xl:pr-10">
                 <li><Link><CiUser /></Link></li>
                 <li><Link><CiSearch/></Link></li>
                 <li><Link><IoIosHeartEmpty/></Link></li>
@@ -88,34 +88,34 @@ const Navbar = () => {
         </div>
         {close ? (
           <div className=" fixed top-0 right-0 h-screen w-full flex">
-            <div className=" w-1/3 bg-gradient-to-l from-blue-600 via-blue-500 to-blue-400 right-0 fixed px-10 h-full sideMenu">
+            <div className=" w-3/4 bg-slate-50 right-0 fixed px-10 h-full sideMenu">
               <div className=" justify-between flex mt-10">
                 <span>
                   <img
                     src="logo.png"
                     alt="pritom"
-                    className="w-14 h-14 rounded-md"
+                    className="md:w-28 sm:w-28 w-24 h-6 md:h-7 sm:h-7 rounded-md"
                   />
                 </span>
                 <span>
                   <AiOutlineClose
                     onClick={() => setClose(false)}
-                    className="text-2xl cursor-pointer text-gray-800"
+                    className="md:text-xl sm:text-xl cursor-pointer text-gray-800"
                   />
                 </span>
               </div>
               <div className="text-center">
-                <ul className=" leading-[55px] text-2xl font-normal font-['lobster'] cursor-pointer text-slate-300">
-                  <li className="relative before:absolute before:content:[''] before:w-full before:h-[2px] before:bg-slate-300 before:bottom-[1px] before:left-0 before:scale-0 hover:before:scale-100 before:duration-1000 before:origin-botom">
+                <ul className=" md:leading-[100px] sm:leading-[100px] leading-[80px] md:text-2xl sm:text-xl text-[18px] font-normal font-['lobster'] cursor-pointer text-slate-950">
+                  <li >
                     Home
                   </li>
-                  <li className="relative before:absolute before:content:[''] before:w-full before:h-[2px] before:bg-slate-300 before:bottom-[1px] before:left-0 before:scale-0 hover:before:scale-100 before:duration-1000 before:origin-botom">
+                  <li >
                     Shop
                   </li>
-                  <li className="relative before:absolute before:content:[''] before:w-full before:h-[2px] before:bg-slate-300 before:bottom-[1px] before:left-0 before:scale-0 hover:before:scale-100 before:duration-1000 before:origin-botom">
+                  <li>
                     About
                   </li>
-                  <li className="relative before:absolute before:content:[''] before:w-full before:h-[2px] before:bg-slate-300 before:bottom-[1px] before:left-0 before:scale-0 hover:before:scale-100 before:duration-1000 before:origin-botom">
+                  <li>
                     Contact
                   </li>
                 </ul>
@@ -125,7 +125,7 @@ const Navbar = () => {
         ) : (
           <FiAlignJustify
             onClick={HandleClose}
-            className="text-2xl cursor-pointer text-gray-800 xl:hidden lg:hidden 2xl:hidden md:block sm:block block"
+            className="md:text-xl sm:text-xl cursor-pointer text-gray-800 xl:hidden lg:hidden 2xl:hidden md:block sm:block block"
           />
         )}
       </div>

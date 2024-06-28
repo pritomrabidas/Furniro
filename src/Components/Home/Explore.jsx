@@ -1,14 +1,14 @@
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
+// import Slider from "react-slick";
+// import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
 const Explore = () => {
-  var settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
+  // var settings = {
+  //   dots: true,
+  //   infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 2,
+  //   slidesToScroll: 1,
+  // };
   return (
     <div className="bg-[#FCF8F3]">
       <div className="container py-11 flex items-center">
@@ -24,14 +24,13 @@ const Explore = () => {
             Explore More
           </button>
         </div>
-        <div className="w-3/5 flex">
-      <Slider {...settings}>
-      <div className="w-full">
-        <img src="slide.png" alt="slide" className="w-full" />
-      </div>
-      
-    </Slider>
-        </div>
+        {/* <div className="w-3/5 flex">
+          <Slider {...settings}>
+            <div>
+              <img src="slide.png" alt="" className="w-full" />
+            </div>
+          </Slider>
+        </div> */}
       </div>
     </div>
   );
