@@ -46,7 +46,7 @@ const Navbar = () => {
     <div className="bg-slate-50 shadow-sm w-full fixed z-20">
       <div className="container py-5 px-2 flex justify-between items-center cursor-default relative ">
         <div className="">
-          <img src="logo.png" alt="" className="w-24 xl:w-40 lg:w-36 md:w-32 sm:w-28 h-6 xl:h-10 lg:h-9 md:h-8 sm:h-7 rounded-lg" />
+          <img src="logo.png" alt="" className="w-28 xl:w-40 lg:w-36 md:w-32 sm:w-28 h-7 xl:h-10 lg:h-9 md:h-8 sm:h-7 rounded-lg" />
         </div>
         <div className=" mx-auto  xl:block lg:block md:hidden sm:hidden hidden">
           <ul className="flex gap-10 xl:gap-10 lg:gap-9 text-xl xl:text-xl lg:text-[18px] font-medium font-['poetsen'] cursor-pointer">
@@ -78,8 +78,8 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <div className=" md:justify-center sm:justify-center justify-center">
-            <ul className="flex xl:flex text-base xl:text-2xl lg:text-[22px] md:text-xl sm:text-[18px] gap-8 xl:gap-9 lg:gap-8 md:gap-8 sm:gap-8 pr-10 xl:pr-10">
+        <div className=" md:justify-center sm:justify-center justify-center xl:justify-end lg:justify-end">
+            <ul className="flex xl:flex text-lg xl:text-2xl lg:text-[22px] md:text-xl sm:text-lg gap-8 xl:gap-9 lg:gap-8 md:gap-8 sm:gap-8 pr-10 xl:pr-10">
                 <li><Link><CiUser /></Link></li>
                 <li><Link><CiSearch/></Link></li>
                 <li><Link><IoIosHeartEmpty/></Link></li>
@@ -125,7 +125,7 @@ const Navbar = () => {
         ) : (
           <FiAlignJustify
             onClick={HandleClose}
-            className="md:text-xl sm:text-xl cursor-pointer text-gray-800 xl:hidden lg:hidden 2xl:hidden md:block sm:block block"
+            className="md:text-2xl sm:text-2xl text-2xl cursor-pointer text-gray-800 xl:hidden lg:hidden 2xl:hidden md:block sm:block block"
           />
         )}
       </div>
