@@ -1,9 +1,17 @@
-
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
 const Explore = () => {
-
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
   return (
     <div className="bg-[#FCF8F3]">
-      <div className="container py-11 flex">
+      <div className="container py-11 flex items-center">
         <div className="w-2/5 font-['poppins']">
           <h2 className="font-bold text-4xl text-navegrey w-[400px]">
             50+ Beautiful rooms inspiration
@@ -15,6 +23,14 @@ const Explore = () => {
           <button className=" border py-3 px-9 text-base font-semibold text-brand bg-secandari">
             Explore More
           </button>
+        </div>
+        <div className="w-3/5 flex">
+      <Slider {...settings}>
+      <div className="w-full">
+        <img src="slide.png" alt="slide" className="w-full" />
+      </div>
+      
+    </Slider>
         </div>
       </div>
     </div>

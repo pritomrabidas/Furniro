@@ -1,3 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.setup{
+    display: grid;
+    grid-template-columns: repeat(12, ifr);
+    grid-template-rows: repeat(8, ifr);
+}
+.setup img:first-child{
+    grid-area: 1 / 1 / 5 /2;
+}
+.setup img:nth-child(2){
+    grid-area: 5 / 1 / 9 / 3;
+}
+.setup img:nth-child(3){
+    grid-area: 2 / 2 / 5 / 4;
+}
+.setup img:nth-child(4){
+    grid-area: 1 / 11 / 6 / 13;
+}
+.setup img:nth-child(5){
+    grid-area: 3 / 6 / 7 / 8;
+}
+.setup img:nth-child(6){
+    grid-area: 5 / 3 / 8 / 6;
+}
+.setup img:nth-child(7){
+    grid-area: 2 / 8 / 6 / 11;
+}
+.setup img:nth-child(8){
+    grid-area: 6 / 8 / 9 / 10;
+}
+.setup img:nth-child(9){
+    grid-area: 6 / 10 / 8 / 12;
+}
