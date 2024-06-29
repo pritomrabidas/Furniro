@@ -79,7 +79,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className=" md:justify-center sm:justify-center justify-center xl:justify-end lg:justify-end">
-            <ul className="flex xl:flex text-xl xl:text-3xl lg:text-[28px] md:text-2xl sm:text-xl gap-9 pr-10">
+            <ul className="flex xl:flex text-xl xl:text-3xl lg:text-[28px] md:text-2xl sm:text-xl gap-7 xl:gap-9 lg:gap-9 md:gap-9 sm:gap-8  pr-10">
                 <li><Link><CiUser /></Link></li>
                 <li><Link><CiSearch/></Link></li>
                 <li><Link><IoIosHeartEmpty/></Link></li>

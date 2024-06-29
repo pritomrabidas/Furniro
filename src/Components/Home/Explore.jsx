@@ -1,18 +1,20 @@
-// import Slider from "react-slick";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import NextArrow from "./NextArrow";
 const Explore = () => {
-  // var settings = {
-  //   dots: true,
-  //   infinite: true,
-  //   speed: 500,
-  //   slidesToShow: 2,
-  //   slidesToScroll: 1,
-  // };
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 400,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    nextArrow: <NextArrow />,
+    prevArrow: <span></span>,
+  };
   return (
-    <div className="bg-[#FCF8F3]">
+    <section className="bg-[#FCF8F3] explore">
       <div className="container py-11 flex items-center">
-        <div className="w-2/5 font-['poppins']">
+        <div className="w-2/5 font-Popins">
           <h2 className="font-bold text-4xl text-navegrey w-[400px]">
             50+ Beautiful rooms inspiration
           </h2>
@@ -24,15 +26,22 @@ const Explore = () => {
             Explore More
           </button>
         </div>
-        {/* <div className="w-3/5 flex">
+        <div className="w-3/5">
           <Slider {...settings}>
-            <div>
-              <img src="slide.png" alt="" className="w-full" />
+            <div className="slide_items">
+              <img src="furniture-1.png" className="w-full h-full" alt="" />
+            </div>
+            <div className="slide_items">
+              <img src="furniture-2.png" className="w-full h-full" alt="" />
+            </div>
+            <div className="slide_items">
+              <img src="furniture-3.png" className="w-full h-full" alt="" />
             </div>
           </Slider>
-        </div> */}
+  
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
