@@ -1,14 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      container:{
-        center:true,
-        width:1536,
+      container: {
+        center: true,
+        width: 1536,
       },
       colors: {
         primary: "#333333",
@@ -17,16 +14,9 @@ export default {
         navegrey: "#3A3A3A",
       },
       fontFamily: {
-        nunitoFont: ["Nunito", "sans-serif"],
-        interFont: ["Inter", "sans-serif"],
-        poetsen: ["Poetsen One", "sans-serif"],
-        lugrasimo: ["Lugrasimo", "cursive"],
-        lobster: ["Lobster", "sans-serif"],
-        pacifico: ["Pacifico", "cursive"],
-        poppins:["Poppins", "sans-serif"]
+        Popins: ["Poppins", "sans-serif"],
       },
     },
   },
   plugins: [],
-}
-
+};

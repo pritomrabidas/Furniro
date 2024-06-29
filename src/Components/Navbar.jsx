@@ -43,13 +43,13 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-slate-50 shadow-sm w-full fixed z-20">
+    <div className="bg-slate-50 shadow-sm w-full fixed z-20 font-Popins">
       <div className="container py-5 px-2 flex justify-between items-center cursor-default relative ">
         <div className="">
-          <img src="logo.png" alt="" className="w-28 xl:w-40 lg:w-36 md:w-32 sm:w-28 h-7 xl:h-10 lg:h-9 md:h-8 sm:h-7 rounded-lg" />
+          <img src="logo.png" alt="" className="w-32 xl:w-44 lg:w-40 md:w-36 sm:w-32 h-8 xl:h-11 lg:h-10 md:h-9 sm:h-8 rounded-lg" />
         </div>
         <div className=" mx-auto  xl:block lg:block md:hidden sm:hidden hidden">
-          <ul className="flex gap-10 xl:gap-10 lg:gap-9 text-xl xl:text-xl lg:text-[18px] font-medium font-['poetsen'] cursor-pointer">
+          <ul className="flex gap-10 xl:gap-10 lg:gap-9 text-xl xl:text-2xl lg:text-[22px] font-medium  cursor-pointer">
             <Link to="/">
               <li
                 onClick={HandleHome}
@@ -79,7 +79,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className=" md:justify-center sm:justify-center justify-center xl:justify-end lg:justify-end">
-            <ul className="flex xl:flex text-lg xl:text-2xl lg:text-[22px] md:text-xl sm:text-lg gap-8 xl:gap-9 lg:gap-8 md:gap-8 sm:gap-8 pr-10 xl:pr-10">
+            <ul className="flex xl:flex text-xl xl:text-3xl lg:text-[28px] md:text-2xl sm:text-xl gap-9 pr-10">
                 <li><Link><CiUser /></Link></li>
                 <li><Link><CiSearch/></Link></li>
                 <li><Link><IoIosHeartEmpty/></Link></li>
@@ -105,7 +105,7 @@ const Navbar = () => {
                 </span>
               </div>
               <div className="text-center">
-                <ul className=" md:leading-[100px] sm:leading-[100px] leading-[80px] md:text-2xl sm:text-xl text-[18px] font-normal font-['lobster'] cursor-pointer text-slate-950">
+                <ul className=" md:leading-[100px] sm:leading-[100px] leading-[80px] md:text-2xl sm:text-xl text-[18px] font-normal cursor-pointer text-slate-950">
                   <li >
                     Home
                   </li>
