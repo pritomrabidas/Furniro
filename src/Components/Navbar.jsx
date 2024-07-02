@@ -44,7 +44,7 @@ const Navbar = () => {
 
   return (
     <div className="bg-slate-50 shadow-sm w-full fixed z-20 font-Popins">
-      <div className="container py-5 px-2 flex justify-between items-center cursor-default relative ">
+      <div className="container py-5 px-2 flex justify-between items-center cursor-default relative font-['Popins']">
         <div className="">
           <img src="logo.png" alt="" className="w-32 xl:w-44 lg:w-40 md:w-36 sm:w-32 h-8 xl:h-11 lg:h-10 md:h-9 sm:h-8 rounded-lg" />
         </div>

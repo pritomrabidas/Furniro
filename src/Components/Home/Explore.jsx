@@ -13,7 +13,7 @@ const Explore = () => {
   };
   return (
     <section className="bg-[#FCF8F3] explore">
-      <div className="container py-11 flex items-center">
+      <div className="container py-11 flex items-center font-['Popins']">
         <div className="w-2/5 font-Popins">
           <h2 className="font-bold text-4xl text-navegrey w-[400px]">
             50+ Beautiful rooms inspiration

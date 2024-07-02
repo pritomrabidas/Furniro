@@ -1,7 +1,7 @@
 const Browse = () => {
   return (
     <div className="bg-slate-50 py-20">
-      <div className="container font-Popins">
+      <div className="container font-['Popins']">
         <div className="">
           <h3 className="font-bold text-2xl xl:text-3xl lg:text-3xl md:text-3xl sm:text-2xl  text-primary text-center pb-1">
             Browse The Range

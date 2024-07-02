@@ -5,7 +5,7 @@ const NextArrow = ({onClick}) => {
   return (
     <div
       onClick={onClick}
-      className="text-brand cursor-pointer w-12 h-12 rounded-full flex justify-center items-center bg-white absolute top-1/2 right-0 -translate-y-1/2"
+      className="text-brand cursor-pointer w-12 h-12 rounded-full flex justify-center items-center bg-secandari absolute top-1/2 right-0 -translate-y-1/2"
     >
       <FaChevronRight />
     </div>
