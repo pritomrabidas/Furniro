@@ -3,8 +3,8 @@ import ProductItem from "./ProductItem"
 
 const Product = () => {
   return (
-    <div className="bg-slate-50 p-10">
-        <div className="container font-['Popins']">
+    <section className="bg-slate-50 p-10 w-full">
+        <div className="container mx-auto font-['Popins']">
             <h2 className="font-bold text-2xl xl:text-3xl lg:text-3xl md:text-3xl sm:text-2xl text-primary text-center pb-8">Our Products</h2>
             <div className=" grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-8 pt-5">
                 <ProductItem Image="product-1.png" Heading="Syltherine" Paragraph="Stylish cafe chair" Price="Rp 2.500.000" ThrowPrice="Rp 3.500.000"/>
@@ -20,7 +20,7 @@ const Product = () => {
             <Button  title="See More"/>
             </div>
         </div>
-    </div>
+    </section>
   )
 }
 

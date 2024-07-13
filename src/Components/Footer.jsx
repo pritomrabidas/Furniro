@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
-    <section className="py-10 px-10 border-t">
-      <div className="container font-['Popins']">
+    <footer className="py-10 px-10 border-t w-full">
+      <div className="container mx-auto font-['Popins']">
         <div className="flex-col flex sm:flex-col md:flex-row lg:flex-row xl:flex-row pb-9 gap-10 ">
           <div className="w-full sm:w-full md:w-2/6 lg:w-2/6 xl:w-2/6 pb-1 sm:pb-1 md:pb-3 lg:pb-4 xl:pb-5">
             <img src="logo.png" alt="logo" className="pb-4 xl:pb-12 lg:pb-12 md:pb-11 sm:pb-4 w-32 xl:w-44 lg:w-44 md:w-40 sm:w-32 h-14 xl:h-24 lg:h-24 md:h-20 sm:h-14" />
@@ -52,7 +52,7 @@ const Footer = () => {
           2023 furino. All rights reverved
         </p>
       </div>
-    </section>
+    </footer>
   );
 };
 

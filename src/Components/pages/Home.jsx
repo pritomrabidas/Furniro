@@ -6,13 +6,13 @@ import Product from "../Home/Product"
 
 const Home = () => {
   return (
-    <div className="">
+    <>
       <Banner/>
       <Browse/>
       <Product/>
       <Explore/>
       <Furniture/>
-    </div>
+    </>
   )
 }
 
