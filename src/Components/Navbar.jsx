@@ -58,12 +58,13 @@ const Navbar = () => {
                 Home
               </li>
             </Link>
+            <Link to="/shop">
             <li
               onClick={HandleShop}
               className={`${shop ? "text-blue-500" : "text-slate-800"}`}
             >
               Shop
-            </li>
+            </li></Link>
             <li
               onClick={HandleAbout}
               className={`${about ? "text-blue-500" : "text-slate-800"}`}

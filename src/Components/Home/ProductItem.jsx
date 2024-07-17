@@ -3,7 +3,7 @@ import { CiShare2 } from "react-icons/ci";
 import { IoIosHeartEmpty } from "react-icons/io";
 const ProductItem = ({ Image, Heading, Paragraph, Price, ThrowPrice }) => {
   return (
-    <div className="bg-white  relative group">
+    <div className="bg-white  relative group font-Popins">
       <img src={Image} alt="product" className=" w-full h-80" />
       <div className=" absolute bg-[rgba(32,22,22,0.71)] z-10 w-full h-full top-0 left-0 scale-0 duration-500 delay-100 group-hover:scale-100">
         <div className="justify-center flex pt-48">
@@ -12,15 +12,15 @@ const ProductItem = ({ Image, Heading, Paragraph, Price, ThrowPrice }) => {
           </Link>
         </div>
         <div className="px-4 text-sm xl:text-base lg:text-base md:text-base sm:text-sm flex gap-5 pt-6 justify-center">
-          <span className="font-semibold font-['poppins'] text-[#FFFFFF] flex gap-2">
+          <span className="font-semibold text-[#FFFFFF] flex gap-2">
             <CiShare2  />
             <p>Share</p>
           </span>
-          <span className="font-semibold font-['poppins'] text-[#FFFFFF] flex gap-2">
+          <span className="font-semibold text-[#FFFFFF] flex gap-2">
             <CiShare2 />
             <p>Share</p>
           </span>
-          <span className="font-semibold font-['poppins'] text-[#FFFFFF] flex gap-2">
+          <span className="font-semibold text-[#FFFFFF] flex gap-2">
             <IoIosHeartEmpty />
             <p>Love</p>
           </span>
@@ -30,14 +30,14 @@ const ProductItem = ({ Image, Heading, Paragraph, Price, ThrowPrice }) => {
         <h3 className="font-semibold text-2xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-3xl font-['poppins'] text-navegrey">
           {Heading}
         </h3>
-        <p className="font-normal text-lg font-['poppins'] text-[#898989]">
+        <p className="font-normal text-lg text-[#898989]">
           {Paragraph}
         </p>
         <div className="flex gap-4">
-          <span className="font-semibold text-lg font-['poppins'] text-primary">
+          <span className="font-semibold text-lg text-primary">
             {Price}
           </span>
-          <span className="font-normal text-base font-['poppins'] line-through text-[#B0B0B0]">
+          <span className="font-normal text-base line-through text-[#B0B0B0]">
             {ThrowPrice}
           </span>
         </div>
