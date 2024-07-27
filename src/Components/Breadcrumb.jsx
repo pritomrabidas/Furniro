@@ -1,5 +1,5 @@
 import { FaChevronRight } from "react-icons/fa";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Breadcrumb = () => {
     const location = useLocation("")
@@ -7,7 +7,7 @@ const Breadcrumb = () => {
   return (
     <div className="justify-center flex pt-3">
       <ul className="flex text-base">
-        <li className=" font-medium text-[#000000]">Home</li>
+        <li className=" font-medium text-[#000000]"><Link to="/">Home</Link></li>
         <li>
           <FaChevronRight className="pt-2 font-semibold text-base text-[#000000]" />
         </li>

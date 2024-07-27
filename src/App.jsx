@@ -7,6 +7,7 @@ import {
 import Layout from "./Components/Layout";
 import Home from "./Components/pages/Home";
 import Shop from "./Components/pages/Shop";
+import Errorpage from "./Components/Errorpage";
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Layout />}>
         <Route index element={<Home/>}></Route>
         <Route path="shop" element={<Shop/>}></Route>
+        <Route path="*" element={<Errorpage/>}></Route>
         </Route>
       </Route>
     )

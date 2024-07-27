@@ -27,7 +27,7 @@ const ProductItem = ({ Image, Heading, Paragraph, Price, ThrowPrice }) => {
         </div>
       </div>
       <div className="p-5">
-        <h3 className="font-semibold text-2xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-3xl font-['poppins'] text-navegrey">
+        <h3 className="font-medium text-2xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-3xl text-navegrey">
           {Heading}
         </h3>
         <p className="font-normal text-lg text-[#898989]">
