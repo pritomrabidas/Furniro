@@ -6,6 +6,7 @@ import { IoIosHeartEmpty } from "react-icons/io";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import CartSlide from "./Cart/CartSlide";
 
 const Navbar = () => {
   const [close, setClose] = useState(false);
@@ -13,6 +14,7 @@ const Navbar = () => {
   const [shop, setShop] = useState(false);
   const [about, setAbout] = useState(false);
   const [contact, setContact] = useState(false);
+  const [sideCart, setsideCart] = useState(false);
 
   const HandleClose = () => {
     setClose(true);
@@ -41,15 +43,18 @@ const Navbar = () => {
     setShop("")
     setAbout("");
   };
-
+  const HandleSideBar =(result)=>{
+    setsideCart(result)
+  }
   return (
+    <>
     <nav className="bg-slate-50 shadow-sm w-full fixed z-20 font-Popins">
-      <div className="container  py-5 px-2 flex justify-between items-center cursor-default relative font-['Popins']">
+      <div className="container  py-5 px-2 flex justify-between items-center cursor-default relative font-Montserrat">
         <div className="">
           <img src="logo.png" alt="" className="w-32 xl:w-44 lg:w-40 md:w-36 sm:w-32 h-8 xl:h-11 lg:h-10 md:h-9 sm:h-8 rounded-lg" />
         </div>
         <div className=" mx-auto  xl:block lg:block md:hidden sm:hidden hidden">
-          <ul className="flex gap-10 xl:gap-10 lg:gap-9 text-xl xl:text-2xl lg:text-[22px] font-medium  cursor-pointer">
+          <ul className="flex gap-10 xl:gap-10 lg:gap-9 text-xl xl:text-2xl lg:text-[22px] font-normal  cursor-pointer">
             <Link to="/">
               <li
                 onClick={HandleHome}
@@ -80,11 +85,11 @@ const Navbar = () => {
           </ul>
         </div>
         <div className=" md:justify-center sm:justify-center justify-center xl:justify-end lg:justify-end">
-            <ul className="flex xl:flex text-xl xl:text-3xl lg:text-[28px] md:text-2xl sm:text-xl gap-7 xl:gap-9 lg:gap-9 md:gap-9 sm:gap-8  pr-10">
-                <li><Link><CiUser /></Link></li>
-                <li><Link><CiSearch/></Link></li>
-                <li><Link><IoIosHeartEmpty/></Link></li>
-                <li><Link><AiOutlineShoppingCart/></Link></li>
+            <ul className="flex xl:flex text-xl xl:text-3xl lg:text-[28px] md:text-2xl sm:text-xl gap-7 xl:gap-9 lg:gap-9 md:gap-9 sm:gap-8  pr-10 cursor-pointer">
+                <li ><CiUser /></li>
+                <li><CiSearch/></li>
+                <li><IoIosHeartEmpty/></li>
+                <li onClick={()=>setsideCart(true)}><AiOutlineShoppingCart/></li>
             </ul>
         </div>
         {close ? (
@@ -131,6 +136,9 @@ const Navbar = () => {
         )}
       </div>
     </nav>
+    {sideCart && <CartSlide HandleSideBar={HandleSideBar}/>}
+    
+    </>
   );
 };
 

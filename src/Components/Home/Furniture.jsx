@@ -2,8 +2,8 @@
 const Furniture = () => {
   return (
     <section className="py-14">
-        <p className="font-semibold text-lg font-['poppins'] text-center text-[#616161]">Share your setup with</p>
-        <h3 className="font-bold text-4xl font-['poppins'] text-center text-navegrey pb-10">#FuniroFurniture</h3>
+        <p className="font-semibold text-lg font-nunitoFont text-center text-[#616161]">Share your setup with</p>
+        <h3 className="font-semibold text-4xl font-Popins text-center text-navegrey pb-10">#FuniroFurniture</h3>
         <div className="setup gap-2">
             <img src="furniture-1.png" alt="product" />
             <img src="furniture-2.png" alt="product" />

@@ -15,6 +15,10 @@ export default {
       },
       fontFamily: {
         Popins: ["Poppins", "sans-serif"],
+        nunitoFont: ["Nunito", "sans-serif"],
+        Montserrat:["Montserrat", "sans-serif"],
+        Raleway:["Raleway", "sans-serif"],
+        Opensans:["Open Sans", "sans-serif"]
       },
     },
   },
