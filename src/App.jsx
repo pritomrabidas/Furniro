@@ -9,6 +9,7 @@ import Home from "./Components/pages/Home";
 import Shop from "./Components/pages/Shop";
 import Errorpage from "./Components/Errorpage";
 import Cart from "./Components/pages/Cart";
+import ProductDetails from "./Components/pages/ProductDetails";
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -17,6 +18,7 @@ function App() {
         <Route index element={<Home/>}></Route>
         <Route path="shop" element={<Shop/>}></Route>
         <Route path="cart" element={<Cart/>}></Route>
+        <Route path="shop/details" element={<ProductDetails/>}></Route>
         <Route path="*" element={<Errorpage/>}></Route>
         </Route>
       </Route>
