@@ -4,7 +4,7 @@ import CartButton from "./CartButton";
 
 const CartSlide = ({HandleSideBar}) => {
   return (
-    <section className=" fixed top-0 right-0 bg-[rgba(0,0,0,0.53)] w-full h-full z-50 duration-1000 delay-1000">
+    <section className=" fixed top-0 right-0 bg-[rgba(0,0,0,0.53)] w-full h-full z-50 duration-1000 delay-1000 ">
       <div className="bg-brand h-[600px] w-[30%] absolute right-0 top-4 p-8 rounded-l-3xl">
       <div className="flex justify-between items-center">
         <h3 className="font-medium text-xl font-Raleway text-[#000000]">Shopping Cart</h3>

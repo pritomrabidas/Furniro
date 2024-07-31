@@ -1,5 +1,6 @@
 import Breadcrumb from "../Breadcrumb";
 import Details from "../ProductDetails/Details";
+import RelatedProducts from "../ProductDetails/RelatedProducts";
 
 const ProductDetails = () => {
   return (
@@ -8,6 +9,7 @@ const ProductDetails = () => {
         <Breadcrumb />
       </div>
       <Details/>
+      <RelatedProducts/>
     </section>
   );
 };

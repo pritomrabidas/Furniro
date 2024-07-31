@@ -7,7 +7,7 @@ const Breadcrumb = () => {
   const path2 = location.pathname.split("/")[2];
   return (
     <div className="justify-center flex pt-3">
-      <ul className="flex text-base items-center gap-3">
+      <ul className="flex text-lg items-center gap-3">
         <li className=" font-medium text-[#000000]">
           <Link to="/">Home</Link>
         </li>
