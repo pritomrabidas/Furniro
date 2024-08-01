@@ -22,7 +22,7 @@ const CartSlide = ({HandleSideBar}) => {
       <div className="w-full h-[1px] bg-[#D9D9D9] mt-7 mb-7"></div>
       <div className="flex justify-between">
         <CartButton title={"Cart"} path="/cart"/>
-        <CartButton title={"Checkout"}/>
+        <CartButton title={"Checkout"} path="/checkout"/>
       </div>
       </div>
     </section>

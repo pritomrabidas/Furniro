@@ -76,12 +76,14 @@ const Navbar = () => {
             >
               About
             </li>
+            <Link to="/contact">
             <li
               onClick={HandleContact}
               className={`${contact ? "text-blue-500" : "text-slate-800"}`}
             >
               Contact
             </li>
+            </Link>
           </ul>
         </div>
         <div className=" md:justify-center sm:justify-center justify-center xl:justify-end lg:justify-end">
