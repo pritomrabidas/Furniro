@@ -17,7 +17,7 @@ const Product = ({ itemsPerPage }) => {
   };
   return (
     <section className="py-12 bg-white">
-      <div className="container">
+      <div className="container mx-auto px-4">
         <div className=" grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-8 pt-5">
           {currentItems &&
             currentItems.map((item) => (

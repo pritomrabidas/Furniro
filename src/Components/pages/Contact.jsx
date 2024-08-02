@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <section>
       <Banner/>
-      <div className="container m-auto">
+      <div className="container m-auto px-10">
         <ContactHeading/>
         <ContactDetails/>
       </div>

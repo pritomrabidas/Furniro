@@ -7,8 +7,8 @@ import Button from "../Button";
 
 const ContactDetails = () => {
   return (
-    <div className="flex">
-      <div className="w-2/5 justify-end  mx-auto pt-8">
+    <div className="flex xl:flex-row lg:flex-row md:flex-row sm:flex-col flex-col">
+      <div className="xl:w-2/5 lg:w-2/5 md:w-2/5 sm:w-full w-full xl:justify-end lg:justify-end md:justify-end sm:justify-start justify-start  mx-auto pt-8">
         <div className="flex gap-7 ">
           <span className="items-start pt-2 text-xl">
             <FaLocationDot />
@@ -17,7 +17,7 @@ const ContactDetails = () => {
             <h4 className="font-Popins font-medium text-2xl text-black">
               Address
             </h4>
-            <p className="font-nunitoFont font-normal text-base text-black w-1/2">
+            <p className="font-nunitoFont font-normal text-base text-black xl:w-1/2 lg:w-1/2 md:w-1/2 sm:w-full w-full">
               236 5th SE Avenue, New York NY10000, United States
             </p>
           </div>
@@ -61,18 +61,23 @@ const ContactDetails = () => {
           </div>
         </div>
       </div>
-      <div className="w-2/5">
-        <InputDetails Heading={"Your name"} placeholder={"Abc"} />
-        <InputDetails
-          Heading={"Email"}
-          type="email"
-          placeholder={"abc@def.com"}
-        />
-        <InputDetails Heading={"Subject"} placeholder={"This is an optional"} />
-        <InputDetails
-          Heading={"Message"}
-          placeholder={"Hi! i’d like to ask about"}
-        />
+      <div className="xl:w-2/5 lg:w-2/5 md:w-2/5 sm:w-full w-full">
+        <div className="w-full">
+          <InputDetails Heading={"Your name"} placeholder={"Abc"} />
+          <InputDetails
+            Heading={"Email"}
+            type="email"
+            placeholder={"abc@def.com"}
+          />
+          <InputDetails
+            Heading={"Subject"}
+            placeholder={"This is an optional"}
+          />
+          <InputDetails
+            Heading={"Message"}
+            placeholder={"Hi! i’d like to ask about"}
+          />
+        </div>
         <div className="py-16">
           <Button title={"Submit"} />
         </div>

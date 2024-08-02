@@ -73,6 +73,10 @@ section{
   .paginate_product .selected a{
     @apply  bg-secandari 
   }
+  .paginate_product .previous{
+    @apply  hidden
+  }
+
   .pagiante_blog_product li a{
     @apply px-6 py-4 text-[#000000] bg-[#F9F1E7] rounded
   }

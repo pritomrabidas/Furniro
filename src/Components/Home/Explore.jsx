@@ -1,6 +1,5 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
-import NextArrow from "./NextArrow";
 const Explore = () => {
   const settings = {
     dots: true,
@@ -8,7 +7,7 @@ const Explore = () => {
     speed: 400,
     slidesToShow: 2,
     slidesToScroll: 1,
-    nextArrow: <NextArrow />,
+    // nextArrow: <NextArrow />,
     prevArrow: <span></span>,
   };
   return (

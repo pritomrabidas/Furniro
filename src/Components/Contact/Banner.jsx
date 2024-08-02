@@ -9,7 +9,7 @@ const Banner = () => {
             alt="cartBanner"
             className="w-20 h-20 mx-auto justify-center"
           />
-          <h3 className="font-medium text-5xl text-center ">Contact</h3>
+          <h3 className="font-medium xl:text-5xl lg:text-5xl md:text-4xl sm:text-3xl text-3xl text-center ">Contact</h3>
           <Breadcrumb />
         </div>
       </div>
