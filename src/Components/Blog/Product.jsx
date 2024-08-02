@@ -27,7 +27,7 @@ const Product = ({ Image,Heading }) => {
           <li className="">Wood</li>
         </ul>
       </div>
-      <h2 className="font-Montserrat font-medium text-3xl text-black py-4">
+      <h2 className="font-Montserrat font-medium xl:text-3xl lg:text-3xl md:text-3xl sm:text-2xl text-2xl text-black py-4">
         {Heading}
       </h2>
       <p className="font-nunitoFont font-normal tex-base text-[#9F9F9F] pb-8">

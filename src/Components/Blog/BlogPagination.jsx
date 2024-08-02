@@ -15,7 +15,7 @@ const BlogPagination = ({ itemsPerPage }) => {
     setItemOffset(newOffset);
   };
   return (
-    <div className="w-[65%] py-10">
+    <div className="xl:w-[65%] lg:w-[65%] w-full py-10">
       <div className="">
         {currentItems &&
           currentItems.map((item) => (

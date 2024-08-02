@@ -23,156 +23,163 @@ const Details = () => {
 
   return (
     <section className="py-8">
-      <div className="container flex gap-16">
-        <div className="w-1/2 h-[500px]">
-          <ProductSlide settings={settings} api={API.images} />
-        </div>
-        <div className="w-1/2">
-          <h2 className="font-Opensans font-normal text-5xl">Asgaard sofa</h2>
-          <h3 className="font-Popins font-medium text-2xl text-[#9F9F9F] py-3">
-            Rs. 250,000.00
-          </h3>
-          <div className="flex gap-1">
-            <ul className="flex gap-1.5 text-base text-[#FFC700]">
-              <li>
-                <FaStar />
-              </li>
-              <li>
-                <FaStar />
-              </li>
-              <li>
-                <FaStar />
-              </li>
-              <li>
-                <FaStar />
-              </li>
-              <li>
-                <FaStarHalf />
-              </li>
-            </ul>
-            <p className="font-Popins font-normal text-sm text-[#9F9F9F] border-l-2 border-[#9F9F9F] pl-5">
-              5 Customer Review
-            </p>
+      <div className="container  px-5">
+        <div className="gap-16 flex xl:flex-row lg:flex-row md:flex-col flex-col  ">
+          <div className="xl:w-1/2 lg:w-1/2 md:w-3/4 sm:w-4/5 w-full h-[500px] justify-center mx-auto">
+            <ProductSlide settings={settings} api={API.images} />
           </div>
-          <p className="font-nunitoFont font-normal text-sm text-[#9F9F9F] w-3/4 pt-4 pb-5">
-            Setting the bar as one of the loudest speakers in its class, the
-            Kilburn is a compact, stout-hearted hero with a well-balanced audio
-            which boasts a clear midrange and extended highs for a sound.
-          </p>
-          <h4 className="font-normal font-Opensans text-sm text-[#9F9F9F] pb-2">
-            Size
-          </h4>
-          <div className="flex gap-4 font-normal font-Popins text-[#000000] text-base">
-            <label
-              htmlFor="L"
-              className={`${
-                selectSize === "L" ? "bg-[#B88E2F]" : "bg-[#F9F1E7]"
-              }  px-3 py-1.5 rounded`}
-            >
-              L
-              <input
-                className="hidden"
-                type="radio"
-                id="L"
-                name="sixe"
-                value="L"
-                onChange={(e) => setSelectSize(e.target.value)}
-              />
-            </label>
-            <label
-              htmlFor="XL"
-              className={`${
-                selectSize === "XL" ? "bg-[#B88E2F]" : "bg-[#F9F1E7]"
-              }  px-3 py-1.5 rounded`}
-            >
-              XL
-              <input
-                className="hidden"
-                type="radio"
-                id="XL"
-                name="sixe"
-                value="XL"
-                onChange={(e) => setSelectSize(e.target.value)}
-              />
-            </label>
-            <label
-              htmlFor="XS"
-              className={`${
-                selectSize === "XS" ? "bg-[#B88E2F]" : "bg-[#F9F1E7]"
-              }  px-3 py-1.5 rounded`}
-            >
-              XS
-              <input
-                className="hidden"
-                type="radio"
-                id="XS"
-                name="sixe"
-                value="XS"
-                onChange={(e) => setSelectSize(e.target.value)}
-              />
-            </label>
-          </div>
-          <h4 className="font-normal font-Opensans text-sm text-[#9F9F9F] pb-2 pt-4">
-            Color
-          </h4>
-          <div className="flex gap-4 font-normal font-Popins text-[#000000] text-base pt-5">
-            <label
-              htmlFor="blue"
-              className={`w-7 h-7 rounded-full ${
-                selectColor === "blue" && "scale-110"
-              }`}
-              style={{ background: "blue" }}
-            >
-              <input
-                className="hidden"
-                type="radio"
-                id="blue"
-                name="color"
-                value="blue"
-                onChange={(e) => setSelectColor(e.target.value)}
-              />
-            </label>
-            <label
-              htmlFor="black"
-              className={`w-7 h-7 rounded-full ${
-                selectColor === "black" && "scale-110"
-              }`}
-              style={{ background: "black" }}
-            >
-              <input
-                className="hidden"
-                type="radio"
-                id="black"
-                name="color"
-                value="black"
-                onChange={(e) => setSelectColor(e.target.value)}
-              />
-            </label>
-            <label
-              htmlFor="orange"
-              className={`w-7 h-7 rounded-full ${
-                selectColor === "orange" && "scale-110"
-              }`}
-              style={{ background: "orange" }}
-            >
-              <input
-                className="hidden"
-                type="radio"
-                id="orange"
-                name="color"
-                value="orange"
-                onChange={(e) => setSelectColor(e.target.value)}
-              />
-            </label>
-          </div>
-          <div className="flex gap-4 items-center pt-8">
-            <div className="flex px-4 py-5 border rounded-xl gap-9  font-medium font-Popins text-base text-black">
-              <button onClick={()=>quantity > 1 && setQuantity(quantity - 1)}>-</button>
-              <p>{quantity}</p>
-              <button onClick={()=>setQuantity(quantity + 1)}>+</button>
+          <div className="xl:w-1/2 lg:w-1/2 md:w-3/4 sm:w-4/5 w-full justify-center mx-auto">
+            <h2 className="font-Opensans font-normal text-5xl">Asgaard sofa</h2>
+            <h3 className="font-Popins font-medium text-2xl text-[#9F9F9F] py-3">
+              Rs. 250,000.00
+            </h3>
+            <div className="flex gap-1">
+              <ul className="flex gap-1.5 text-base text-[#FFC700]">
+                <li>
+                  <FaStar />
+                </li>
+                <li>
+                  <FaStar />
+                </li>
+                <li>
+                  <FaStar />
+                </li>
+                <li>
+                  <FaStar />
+                </li>
+                <li>
+                  <FaStarHalf />
+                </li>
+              </ul>
+              <p className="font-Popins font-normal text-sm text-[#9F9F9F] border-l-2 border-[#9F9F9F] pl-5">
+                5 Customer Review
+              </p>
             </div>
-            <div className="flex px-12 py-4 border border-black rounded-xl font-Raleway font-normal text-lg text-black">
-              <Link to="">Add To Cart</Link>
+            <p className="font-nunitoFont font-normal text-sm text-[#9F9F9F] w-3/4 pt-4 pb-5">
+              Setting the bar as one of the loudest speakers in its class, the
+              Kilburn is a compact, stout-hearted hero with a well-balanced
+              audio which boasts a clear midrange and extended highs for a
+              sound.
+            </p>
+            <h4 className="font-normal font-Opensans text-sm text-[#9F9F9F] pb-2">
+              Size
+            </h4>
+            <div className="flex gap-4 font-normal font-Popins text-[#000000] text-base">
+              <label
+                htmlFor="L"
+                className={`${
+                  selectSize === "L" ? "bg-[#B88E2F]" : "bg-[#F9F1E7]"
+                }  px-3 py-1.5 rounded`}
+              >
+                L
+                <input
+                  className="hidden"
+                  type="radio"
+                  id="L"
+                  name="sixe"
+                  value="L"
+                  onChange={(e) => setSelectSize(e.target.value)}
+                />
+              </label>
+              <label
+                htmlFor="XL"
+                className={`${
+                  selectSize === "XL" ? "bg-[#B88E2F]" : "bg-[#F9F1E7]"
+                }  px-3 py-1.5 rounded`}
+              >
+                XL
+                <input
+                  className="hidden"
+                  type="radio"
+                  id="XL"
+                  name="sixe"
+                  value="XL"
+                  onChange={(e) => setSelectSize(e.target.value)}
+                />
+              </label>
+              <label
+                htmlFor="XS"
+                className={`${
+                  selectSize === "XS" ? "bg-[#B88E2F]" : "bg-[#F9F1E7]"
+                }  px-3 py-1.5 rounded`}
+              >
+                XS
+                <input
+                  className="hidden"
+                  type="radio"
+                  id="XS"
+                  name="sixe"
+                  value="XS"
+                  onChange={(e) => setSelectSize(e.target.value)}
+                />
+              </label>
+            </div>
+            <h4 className="font-normal font-Opensans text-sm text-[#9F9F9F] pb-2 pt-4">
+              Color
+            </h4>
+            <div className="flex gap-4 font-normal font-Popins text-[#000000] text-base pt-5">
+              <label
+                htmlFor="blue"
+                className={`w-7 h-7 rounded-full ${
+                  selectColor === "blue" && "scale-110"
+                }`}
+                style={{ background: "blue" }}
+              >
+                <input
+                  className="hidden"
+                  type="radio"
+                  id="blue"
+                  name="color"
+                  value="blue"
+                  onChange={(e) => setSelectColor(e.target.value)}
+                />
+              </label>
+              <label
+                htmlFor="black"
+                className={`w-7 h-7 rounded-full ${
+                  selectColor === "black" && "scale-110"
+                }`}
+                style={{ background: "black" }}
+              >
+                <input
+                  className="hidden"
+                  type="radio"
+                  id="black"
+                  name="color"
+                  value="black"
+                  onChange={(e) => setSelectColor(e.target.value)}
+                />
+              </label>
+              <label
+                htmlFor="orange"
+                className={`w-7 h-7 rounded-full ${
+                  selectColor === "orange" && "scale-110"
+                }`}
+                style={{ background: "orange" }}
+              >
+                <input
+                  className="hidden"
+                  type="radio"
+                  id="orange"
+                  name="color"
+                  value="orange"
+                  onChange={(e) => setSelectColor(e.target.value)}
+                />
+              </label>
+            </div>
+            <div className="flex gap-4 items-center pt-8">
+              <div className="flex px-4 py-5 border rounded-xl gap-9  font-medium font-Popins text-base text-black">
+                <button
+                  onClick={() => quantity > 1 && setQuantity(quantity - 1)}
+                >
+                  -
+                </button>
+                <p>{quantity}</p>
+                <button onClick={() => setQuantity(quantity + 1)}>+</button>
+              </div>
+              <div className="flex px-12 py-4 border border-black rounded-xl font-Raleway font-normal text-lg text-black">
+                <Link to="">Add To Cart</Link>
+              </div>
             </div>
           </div>
         </div>

@@ -5,7 +5,7 @@ import BlogPost from "./BlogPost";
 
 const BlogRightDetail = () => {
   return (
-    <div className="w-[30%] py-10">
+    <div className="xl:w-[30%] lg:w-[30%] md:w-1/2 sm:w-4/5 w-full py-10 justify-center mx-auto">
       <div className="w-full h-14 border-2 border-[#9F9F9F] rounded-lg items-center flex px-5">
         <input type="search" className="w-full outline-none " />
         <Link>

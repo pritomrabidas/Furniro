@@ -4,7 +4,7 @@ import ProductItem from "../Home/ProductItem";
 const RelatedProducts = () => {
   return (
     <section>
-      <div className="container pt-14 pb-20">
+      <div className="container mx-auto pt-14 pb-20 px-5">
         <h2 className="text-center font-Opensans font-semibold text-3xl text-black pb-6">
           Related Products
         </h2>
