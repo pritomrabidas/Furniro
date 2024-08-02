@@ -87,7 +87,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className=" md:justify-center sm:justify-center justify-center xl:justify-end lg:justify-end">
-            <ul className="flex xl:flex text-xl xl:text-3xl lg:text-[28px] md:text-2xl sm:text-xl gap-7 xl:gap-9 lg:gap-9 md:gap-9 sm:gap-8  pr-10 cursor-pointer">
+            <ul className="flex xl:flex text-xl xl:text-3xl lg:text-[28px] md:text-2xl sm:text-xl gap-4 xl:gap-9 lg:gap-9 md:gap-9 sm:gap-8  pr-10 cursor-pointer">
                 <li ><CiUser /></li>
                 <li><CiSearch/></li>
                 <li><IoIosHeartEmpty/></li>
@@ -113,19 +113,19 @@ const Navbar = () => {
                 </span>
               </div>
               <div className="text-center">
-                <ul className=" md:leading-[100px] sm:leading-[100px] leading-[80px] md:text-2xl sm:text-xl text-[18px] font-normal cursor-pointer text-slate-950">
-                  <li >
+                <ul className=" md:leading-[100px] sm:leading-[100px] leading-[80px] md:text-2xl sm:text-xl text-[18px] font-normal cursor-pointer text-slate-950 flex-col flex">
+                  <Link to="/" onClick={() => setClose(false)} >
                     Home
-                  </li>
-                  <li >
+                  </Link>
+                  <Link to="/shop" onClick={() => setClose(false)} >
                     Shop
-                  </li>
-                  <li>
+                  </Link>
+                  <Link to="" onClick={() => setClose(false)}>
                     About
-                  </li>
-                  <li>
+                  </Link>
+                  <Link to="/contact" onClick={() => setClose(false)}>
                     Contact
-                  </li>
+                  </Link>
                 </ul>
               </div>
             </div>
