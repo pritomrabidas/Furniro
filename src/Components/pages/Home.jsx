@@ -1,6 +1,6 @@
 import Banner from "../Home/Banner"
 import Browse from "../Home/Browse"
-import Explore from "../Home/Explore"
+import ExploreMore from "../Home/ExploreMore"
 import Furniture from "../Home/Furniture"
 import Product from "../Home/Product"
 
@@ -10,7 +10,7 @@ const Home = () => {
       <Banner/>
       <Browse/>
       <Product/>
-      <Explore/>
+      <ExploreMore/>
       <Furniture/>
     </>
   )

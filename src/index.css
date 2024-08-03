@@ -39,33 +39,6 @@ section{
 }
 
 
-.explore .slick-active .slide_items {
-    @apply h-[486px] px-3;
-  }
-  
-  .explore .slick-active.slick-current .slide_items {
-    @apply h-[582px];
-  }
-  
-  .explore .slick-slider {
-    @apply h-[582px];
-  }
-  
-  .explore .slick-slider .slick-dots {
-    display: flex !important;
-    @apply gap-5;
-  }
-  
-  .explore .slick-slider .slick-dots {
-    @apply absolute bottom-8 left-1/2;
-  }
-  
-  .explore .slick-slider .slick-dots li button {
-    @apply text-[0px] w-3 h-3 rounded-full bg-brand;
-  }
-  .explore .slick-slider .slick-dots .slick-active button {
-    @apply text-[0px] w-3 h-3 rounded-full bg-secandari relative after:absolute after:w-7 after:h-7 after:top-1/2 after:left-1/2 after:-translate-y-1/2 after:-translate-x-1/2 after:border-2 after:border-secandari after:rounded-full;
-  }  
 
   .paginate_product li a{
     @apply px-6 py-4 text-[#000000] bg-[#F9F1E7] rounded
