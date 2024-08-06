@@ -2,7 +2,7 @@ import Button from "../Button"
 
 const Banner = () => {
   return (
-    <section className="bg-[url('/banner.jpg')] justify-center mx-auto w-full flex py-28 xl:py-40 lg:py-36 md:py-32 sm:py-32">
+    <section className="bg-[url('/banner.jpg')] justify-center mx-auto w-full flex py-32 xl:py-40 lg:py-36 md:py-32 sm:py-32">
       <div className="container mx-auto flex">
         <div className="w-0 xl:w-1/2 lg:w-1/2 md:w-0 sm:w-0"></div>
         <div className="w-full xl:w-1/2 lg:w-1/2 md:w-full sm:w-full px-10 ">
