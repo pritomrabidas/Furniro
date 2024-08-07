@@ -11,10 +11,12 @@ const Product = () => {
         setProductList(res.data);
       })
       .catch((err) => {
-        console.log(err);
+        console.log(err)
       });
   }, []);
   productList.length = 8
+  console.log(ProductData);
+  
   return (
     <section className="bg-slate-50 p-10 w-full">
       <div className="container mx-auto">

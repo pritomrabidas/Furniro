@@ -7,7 +7,7 @@ const Shop = () => {
     <>
       <Banner />
       <Filter/>
-      <Product itemsPerPage={8}/>
+      <Product itemsPerPage={16}/>
     </>
   );
 };
