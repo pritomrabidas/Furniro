@@ -4,34 +4,34 @@ import { FaStar } from "react-icons/fa";
 import { FaStarHalf } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-const API = {
-  images: [
-    "https://i.imgur.com/QkIa5tT.jpeg",
-    "https://i.imgur.com/jb5Yu0h.jpeg",
-    "https://i.imgur.com/UlxxXyG.jpeg",
-  ],
-};
-const Details = () => {
+// const API = {
+//   images: [
+//     "https://i.imgur.com/QkIa5tT.jpeg",
+//     "https://i.imgur.com/jb5Yu0h.jpeg",
+//     "https://i.imgur.com/UlxxXyG.jpeg",
+//   ],
+// };
+const Details = ({data}) => {
   const [selectSize, setSelectSize] = useState(null);
   const [selectColor, setSelectColor] = useState("");
   const [quantity, setQuantity] = useState(1);
-  console.log(selectColor);
   const settings = {
     direction: "vertical", // or ""
     zoom: false, // or
   };
+console.log(data);
 
   return (
     <section className="py-8">
       <div className="container  px-5">
         <div className="gap-16 flex xl:flex-row lg:flex-row md:flex-col flex-col  ">
           <div className="xl:w-1/2 lg:w-1/2 md:w-3/4 sm:w-4/5 w-full h-[500px] justify-center mx-auto">
-            <ProductSlide settings={settings} api={API.images} />
+            <ProductSlide settings={settings} api={data?.images} />
           </div>
           <div className="xl:w-1/2 lg:w-1/2 md:w-3/4 sm:w-4/5 w-full justify-center mx-auto">
-            <h2 className="font-Opensans font-normal text-5xl">Asgaard sofa</h2>
-            <h3 className="font-Popins font-medium text-2xl text-[#9F9F9F] py-3">
-              Rs. 250,000.00
+            <h2 className="font-Opensans font-normal text-5xl">{data?.title}</h2>
+            <h3 className="font-Popins font-medium text-3xl text-[#9F9F9F] py-3">
+              & {data?.price}
             </h3>
             <div className="flex gap-1">
               <ul className="flex gap-1.5 text-base text-[#FFC700]">
@@ -56,10 +56,7 @@ const Details = () => {
               </p>
             </div>
             <p className="font-nunitoFont font-normal text-sm text-[#9F9F9F] w-3/4 pt-4 pb-5">
-              Setting the bar as one of the loudest speakers in its class, the
-              Kilburn is a compact, stout-hearted hero with a well-balanced
-              audio which boasts a clear midrange and extended highs for a
-              sound.
+              {data?.description}
             </p>
             <h4 className="font-normal font-Opensans text-sm text-[#9F9F9F] pb-2">
               Size

@@ -15,7 +15,6 @@ const Product = () => {
       });
   }, []);
   productList.length = 8
-  console.log(ProductData);
   
   return (
     <section className="bg-slate-50 p-10 w-full">
