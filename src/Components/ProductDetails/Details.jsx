@@ -19,7 +19,6 @@ const Details = ({data}) => {
     direction: "vertical", // or ""
     zoom: false, // or
   };
-console.log(data);
 
   return (
     <section className="py-8">
@@ -29,8 +28,8 @@ console.log(data);
             <ProductSlide settings={settings} api={data?.images} />
           </div>
           <div className="xl:w-1/2 lg:w-1/2 md:w-3/4 sm:w-4/5 w-full justify-center mx-auto">
-            <h2 className="font-Opensans font-normal text-5xl">{data?.title}</h2>
-            <h3 className="font-Popins font-medium text-3xl text-[#9F9F9F] py-3">
+            <h2 className="font-Opensans font-medium text-5xl">{data?.title}</h2>
+            <h3 className="font-nunitoFont font-medium text-3xl text-[#9F9F9F] py-3">
               & {data?.price}
             </h3>
             <div className="flex gap-1">

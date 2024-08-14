@@ -16,7 +16,9 @@ const ProductDetails = () => {
           if (item.id == param.id) {
             setProduct(item);
           }
+          console.log(res.data.category.name);
         }
+        
       })
       .catch((err) => {
         console.log(err);

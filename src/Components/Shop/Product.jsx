@@ -32,7 +32,7 @@ const Product = ({ itemsPerPage }) => {
       <div className="container mx-auto px-4">
         <div className=" grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-8 pt-5">
           {currentItems &&
-            currentItems.map((item) => <ProductItem key={item.id} data={item} />)}
+            currentItems.map((item) => <ProductItem key={item.key} data={item} />)}
         </div>
         <ReactPaginate
           breakLabel="..."
