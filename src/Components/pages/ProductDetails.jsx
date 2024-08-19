@@ -8,6 +8,7 @@ import { ProductData } from "../../api/Index";
 const ProductDetails = () => {
   const param = useParams();
   const [product, setProduct] = useState([]);
+  const [relatedProduct, setRelatedProduct] = useState([]);
 
   useEffect(() => {
     ProductData()
@@ -15,15 +16,18 @@ const ProductDetails = () => {
         for (let item of res.data) {
           if (item.id == param.id) {
             setProduct(item);
+            for (let related of res.data) {
+              if (item.category.name == related.category.name ) {
+                setRelatedProduct((Prev)=>[...Prev,related])
+              }
+            }
           }
-          console.log(res.data.category.name);
         }
-        
       })
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [param.id]);
 
   return (
     <section className="pt-20">
@@ -31,7 +35,7 @@ const ProductDetails = () => {
         <Breadcrumb />
       </div>
       <Details data={product} />
-      <RelatedProducts />
+      <RelatedProducts products={relatedProduct} />
     </section>
   );
 };
