@@ -1,10 +1,11 @@
 import { FaChevronRight } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 
-const Breadcrumb = () => {
+const Breadcrumb = ({title}) => {
   const location = useLocation("");
   const path = location.pathname.split("/")[1];
-  const path2 = location.pathname.split("/")[2];
+  console.log(title);
+  
   return (
     <div className="justify-center flex pt-3">
       <ul className="flex text-lg items-center gap-3">
@@ -17,12 +18,12 @@ const Breadcrumb = () => {
         <Link to={`/${path}`} className=" font-normal text-[#000000]">
           {path}
         </Link>
-        {path2 && (
+        {title && (
           <>
             <li>
               <FaChevronRight className="font-normal text-xs text-[#000000]" />
             </li>
-            <Link className=" font-normal text-[#000000]">{path2}</Link>
+            <Link className=" font-normal text-[#000000]">{title}</Link>
           </>
         )}
       </ul>
