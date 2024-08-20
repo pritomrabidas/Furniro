@@ -2,7 +2,9 @@ import ProductSlide from "product-slide";
 import { useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { FaStarHalf } from "react-icons/fa";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { addtoCart } from "../../reducer/ProductSlice";
 
 // const API = {
 //   images: [
@@ -12,14 +14,25 @@ import { Link } from "react-router-dom";
 //   ],
 // };
 const Details = ({data}) => {
-  const [selectSize, setSelectSize] = useState(null);
+  data.size = ["L", "XL", "XXL"]
+  const [selectSize, setSelectSize] = useState(data?.size[0]);
   const [selectColor, setSelectColor] = useState("");
   const [quantity, setQuantity] = useState(1);
+  const dispatch = useDispatch()
   const settings = {
     direction: "vertical", // or ""
     zoom: false, // or
   };
 
+  const HandleAddToCart = ()=>{
+    data = {
+      ...data,
+      size:selectSize,
+      color:selectColor,
+      quantity:quantity
+    }
+    dispatch(addtoCart(data))
+  }
   return (
     <section className="py-8">
       <div className="container  px-5">
@@ -174,7 +187,7 @@ const Details = ({data}) => {
                 <button onClick={() => setQuantity(quantity + 1)}>+</button>
               </div>
               <div className="flex px-12 py-4 border border-black rounded-xl font-Raleway font-normal text-lg text-black">
-                <Link to="">Add To Cart</Link>
+                <Link onClick={HandleAddToCart} to="">Add To Cart</Link>
               </div>
             </div>
           </div>
