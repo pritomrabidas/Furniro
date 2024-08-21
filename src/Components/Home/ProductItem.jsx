@@ -6,6 +6,8 @@ const ProductItem = ({ data }) => {
   const HandleAddToCart = ()=>{
     dispatch(addtoCart(data))
   }
+  console.log(HandleAddToCart);
+  
   return (
     <div className="">
       <div className="bg-white  relative group ">

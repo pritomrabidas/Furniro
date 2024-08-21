@@ -32,7 +32,7 @@ const ProductDetails = () => {
   return (
     <section className="pt-20">
       <div className="py-8 bg-[#F9F1E7] !justify-start">
-        <Breadcrumb title={product.title} />
+        <Breadcrumb title={product?.title} />
       </div>
       <Details data={product} />
       <RelatedProducts products={relatedProduct} />

@@ -4,7 +4,6 @@ import { Link, useLocation } from "react-router-dom";
 const Breadcrumb = ({title}) => {
   const location = useLocation("");
   const path = location.pathname.split("/")[1];
-  console.log(title);
   
   return (
     <div className="justify-center flex pt-3">
