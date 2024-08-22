@@ -2,11 +2,16 @@ import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { addtoCart } from "../../reducer/ProductSlice";
 const ProductItem = ({ data }) => {
+  
   const dispatch = useDispatch()
   const HandleAddToCart = ()=>{
+    data ={
+      ...data,
+        quantity:1,
+        AddPrice:data?.price
+    }
     dispatch(addtoCart(data))
   }
-  console.log(HandleAddToCart);
   
   return (
     <div className="">
@@ -16,7 +21,7 @@ const ProductItem = ({ data }) => {
           <div className="justify-center flex m-auto pt-32">
             <Link
             onClick={HandleAddToCart}
-              // to="/cart"
+              to={"/cart"}
               className="px-10 xl:px-12 lg:px-12 md:px-11 sm:px-10  py-3 border bg-brand text-secandari font-Montserrat rounded-sm"
             >
               Add to cart

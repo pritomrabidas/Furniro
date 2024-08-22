@@ -6,13 +6,6 @@ import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { addtoCart } from "../../reducer/ProductSlice";
 
-// const API = {
-//   images: [
-//     "https://i.imgur.com/QkIa5tT.jpeg",
-//     "https://i.imgur.com/jb5Yu0h.jpeg",
-//     "https://i.imgur.com/UlxxXyG.jpeg",
-//   ],
-// };
 const Details = ({data}) => {
   data.size = ["L", "XL", "XXL"]
   const [selectSize, setSelectSize] = useState(data?.size[0]);
@@ -29,7 +22,8 @@ const Details = ({data}) => {
       ...data,
       size:selectSize,
       color:selectColor,
-      quantity:quantity
+      quantity:quantity,
+      AddPrice:data?.price * quantity,
     }
     dispatch(addtoCart(data))
   }
@@ -187,7 +181,7 @@ const Details = ({data}) => {
                 <button onClick={() => setQuantity(quantity + 1)}>+</button>
               </div>
               <div className="flex px-12 py-4 border border-black rounded-xl font-Raleway font-normal text-lg text-black">
-                <Link onClick={HandleAddToCart} to="">Add To Cart</Link>
+                <Link to="/cart" onClick={HandleAddToCart} >Add To Cart</Link>
               </div>
             </div>
           </div>

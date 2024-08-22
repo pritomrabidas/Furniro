@@ -5,7 +5,10 @@ import { useSelector } from "react-redux";
 
 const CartSlide = ({HandleSideBar}) => {
   const productList = useSelector((state)=>state.cartList.product)
-  console.log(productList);
+  const totalPrice = productList.reduce((total,product)=>{
+   return total + product.AddPrice
+  },0)
+  
   
   return (
     <section className=" fixed top-0 right-0 bg-[rgba(0,0,0,0.53)] w-full h-full z-50 duration-1000 delay-1000 ">
@@ -25,7 +28,7 @@ const CartSlide = ({HandleSideBar}) => {
       </div>
       <div className="flex justify-between pt-28">
         <p className="font-normal font-Opensans text-base text-[#000000]">Subtotal</p>
-        <p className="font-normal font-Opensans text-base text-[#B88E2F]">Rs. 520,000.00</p>
+        <p className="font-normal font-Opensans text-base text-[#B88E2F]">Rs. {totalPrice}</p>
       </div>
       <div className="w-full h-[1px] bg-[#D9D9D9] mt-7 mb-7"></div>
       <div className="flex justify-between">

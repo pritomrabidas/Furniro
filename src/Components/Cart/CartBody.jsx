@@ -1,7 +1,10 @@
+import { useSelector } from "react-redux";
 import CartBodyItem from "./CartBodyItem";
 import CartButton from "./CartButton";
 
 const CartBody = () => {
+  const productList = useSelector((state) => state.cartList.product);
+  const totalPrice = productList.reduce((total, product) => total + product.AddPrice, 0);
   return (
     <section>
       <div className="container mx-auto ">
@@ -13,8 +16,9 @@ const CartBody = () => {
               <th>Quantity</th>
               <th>Subtotal</th>
             </div>
-            <CartBodyItem />
-            <CartBodyItem />
+            {productList.map((item) => (
+              <CartBodyItem key={item.id} data={item} />
+            ))}
           </div>
           <div className="xl:w-2/5 lg:w-2/5 md:w-full items-end flex xl:justify-start justify-center">
             <div className="bg-[#F9F1E7] px-16 pt-6 pb-14 rounded-lg">
@@ -26,7 +30,7 @@ const CartBody = () => {
                   Subtotal
                 </h2>
                 <p className="font-normal font-nunitoFont text-base text-[#9F9F9F]">
-                  Rs. 250,000.00
+                  $ {totalPrice}
                 </p>
               </div>
               <div className="flex gap-12 ">
@@ -34,7 +38,7 @@ const CartBody = () => {
                   Total
                 </h2>
                 <p className="font-medium font-nunitoFont text-xl text-[#B88E2F]">
-                  Rs. 250,000.00
+                  $ {totalPrice}
                 </p>
               </div>
               <div className="pt-10 justify-center flex">
