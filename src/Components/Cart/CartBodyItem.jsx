@@ -1,8 +1,9 @@
 import { HiArchiveBox } from "react-icons/hi2";
+import { useDispatch } from "react-redux";
+import { removeFromcart } from "../../reducer/ProductSlice";
 
 const CartBodyItem = ({data}) => {
-  console.log(data);
-  
+  const dispatch = useDispatch()
   return (
     <div className="items-center flex pt-12 font-normal font-nunitoFont xl:text-base lg:text-base md:text-base sm:text-base text-xs text-[#9F9F9F] justify-between">
             <td className="items-center flex xl:gap-2 lg:gap-2 md:gap-2 sm:gap-2 gap-0">
@@ -19,7 +20,7 @@ const CartBodyItem = ({data}) => {
             <td className="xl:pl-16 lg:pl-40 md:pl-16 sm:pl-20 pl-3 ">{data?.quantity}</td>
             <td className="xl:pl-28 lg:pl-44 md:pl-28 sm:pl-20 pl-4 ">$ {data?.AddPrice}</td>
             <td className="xl:pl-12 lg:pl-12 md:pl-12 sm:pl-8 pl-4">
-              <HiArchiveBox className="text-xl text-secandari" />
+              <HiArchiveBox onClick={()=>dispatch(removeFromcart(data?.id))} className="text-xl text-secandari" />
             </td>
           </div>
   )
