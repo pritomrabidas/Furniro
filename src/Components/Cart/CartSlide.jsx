@@ -18,6 +18,10 @@ const CartSlide = ({HandleSideBar}) => {
         <h3><FaRegWindowClose onClick={()=>HandleSideBar(false)} className="text-xl rounded"/></h3>
       </div>
       <p className="w-4/5 h-[1px] bg-[#D9D9D9] mt-7 mb-10"></p>
+      {
+        productList.length > 0
+        ?
+      <>
       <div className=" h-[210px] overflow-y-scroll pr-2"> 
         {
           productList.map((item)=>(
@@ -30,6 +34,11 @@ const CartSlide = ({HandleSideBar}) => {
         <p className="font-normal font-Opensans text-base text-[#000000]">Subtotal</p>
         <p className="font-normal font-Opensans text-base text-[#B88E2F]">Rs. {totalPrice}</p>
       </div>
+      </>:
+      <p className="text-center font-nunitoFont text-xl">
+        There are no items in this cart
+      </p>
+      }
       <div className="w-full h-[1px] bg-[#D9D9D9] mt-7 mb-7"></div>
       <div className="flex justify-between">
         <CartButton title={"Cart"} path="/cart"/>

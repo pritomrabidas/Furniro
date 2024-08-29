@@ -16,7 +16,7 @@ const RelatedProducts = ({ products }) => {
           ))}
         </div>
         <div className="text-center pt-11">
-          <Button title={"Show More"} />
+          <Button title={"Show More"} path={"/shop"} />
         </div>
       </div>
     </section>

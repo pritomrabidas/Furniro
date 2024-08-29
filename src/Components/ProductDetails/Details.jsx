@@ -5,37 +5,44 @@ import { FaStarHalf } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { addtoCart } from "../../reducer/ProductSlice";
-
-const Details = ({data}) => {
-  data.size = ["L", "XL", "XXL"]
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+const Details = ({ data }) => {
+  data.size = ["L", "XL", "XXL"];
   const [selectSize, setSelectSize] = useState(data?.size[0]);
   const [selectColor, setSelectColor] = useState("");
   const [quantity, setQuantity] = useState(1);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const settings = {
     direction: "vertical", // or ""
     zoom: false, // or
   };
 
-  const HandleAddToCart = ()=>{
+  const HandleAddToCart = () => {
     data = {
       ...data,
-      size:selectSize,
-      color:selectColor,
-      quantity:quantity,
-      AddPrice:data?.price * quantity,
-    }
-    dispatch(addtoCart(data))
-  }
+      size: selectSize,
+      color: selectColor,
+      quantity: quantity,
+      AddPrice: data?.price * quantity,
+    };
+    dispatch(addtoCart(data));
+    toast(' Add to cart Succesfully !', {
+      position: "top-center",
+      })
+  };
   return (
     <section className="py-8">
+      <ToastContainer position="top-center" />
       <div className="container  px-5">
         <div className="gap-16 flex xl:flex-row lg:flex-row md:flex-col flex-col  ">
           <div className="xl:w-1/2 lg:w-1/2 md:w-3/4 sm:w-4/5 w-full h-[500px] justify-center mx-auto">
             <ProductSlide settings={settings} api={data?.images} />
           </div>
           <div className="xl:w-1/2 lg:w-1/2 md:w-3/4 sm:w-4/5 w-full justify-center mx-auto">
-            <h2 className="font-Opensans font-medium text-5xl">{data?.title}</h2>
+            <h2 className="font-Opensans font-medium text-5xl">
+              {data?.title}
+            </h2>
             <h3 className="font-nunitoFont font-medium text-3xl text-[#9F9F9F] py-3">
               & {data?.price}
             </h3>
@@ -181,7 +188,7 @@ const Details = ({data}) => {
                 <button onClick={() => setQuantity(quantity + 1)}>+</button>
               </div>
               <div className="flex px-12 py-4 border border-black rounded-xl font-Raleway font-normal text-lg text-black">
-                <Link to="/cart" onClick={HandleAddToCart} >Add To Cart</Link>
+                <Link onClick={HandleAddToCart}>Add To Cart</Link>
               </div>
             </div>
           </div>
