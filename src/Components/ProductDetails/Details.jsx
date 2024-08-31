@@ -27,7 +27,7 @@ const Details = ({ data }) => {
       AddPrice: data?.price * quantity,
     };
     dispatch(addtoCart(data));
-    toast(' Add to cart Succesfully !', {
+    toast(' Add To Cart Succesfully !', {
       position: "top-center",
       })
   };

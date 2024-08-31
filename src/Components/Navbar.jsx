@@ -7,6 +7,7 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import CartSlide from "./Cart/CartSlide";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const [close, setClose] = useState(false);
@@ -46,6 +47,7 @@ const Navbar = () => {
   const HandleSideBar =(result)=>{
     setsideCart(result)
   }
+  const productList = useSelector((state) => state.cartList.product);
   return (
     <>
     <nav className="bg-slate-50 shadow-sm w-full fixed z-20 font-Popins">
@@ -91,7 +93,9 @@ const Navbar = () => {
                 <li ><CiUser /></li>
                 <li><CiSearch/></li>
                 <li><IoIosHeartEmpty/></li>
-                <li onClick={()=>setsideCart(true)}><AiOutlineShoppingCart/></li>
+                <li className="relative" onClick={()=>setsideCart(true)}><AiOutlineShoppingCart/>
+                <span className=" absolute -top-2 -right-2 w-5 h-5 rounded-full bg-[#B88E2F] text-white text-sm text-center m-auto items-center">{productList.length}</span>
+                </li>
             </ul>
         </div>
         {close ? (
