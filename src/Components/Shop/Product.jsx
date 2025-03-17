@@ -3,7 +3,6 @@ import ReactPaginate from "react-paginate";
 import ProductItem from "../Home/ProductItem";
 import { ProductData } from "../../api/Index";
 
-
 const Product = ({ itemsPerPage }) => {
   const [productList, setProductList] = useState([]);
   const [itemOffset, setItemOffset] = useState(0);

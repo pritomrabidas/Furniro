@@ -1,8 +1,14 @@
 import { Link } from "react-router-dom";
 import InputDetails from "../Utilites/InputDetails";
 import SelectDetails from "../Utilites/SelectDetails";
+import { useSelector } from "react-redux";
 
 const CheckOUtDetails = () => {
+  const productList = useSelector((state) => state.cartList.product);
+  const totalPrice = productList.reduce(
+    (total, product) => total + product.AddPrice,
+    0
+  );
   return (
     <section className="pt-16">
       <div className="container mx-auto">
@@ -34,20 +40,22 @@ const CheckOUtDetails = () => {
                 Subtotal
               </h3>
             </div>
-            <div className="justify-between flex pt-3.5">
-              <p className="font-Opensans font-normal text-base text-[#9F9F9F]">
-                Asgaard sofa X 1
-              </p>
-              <p className="font-nunitoFont font-normal text-base text-black">
-                Rs. 250,000.00
-              </p>
-            </div>
+            {productList.map((item) => (
+              <div key={item.key} className="justify-between flex pt-3.5">
+                <p className="font-Opensans font-normal text-base text-[#9F9F9F]">
+                  {item?.title} X {item?.quantity}
+                </p>
+                <p className="font-nunitoFont font-normal text-base text-black">
+                  {item?.AddPrice}
+                </p>
+              </div>
+            ))}
             <div className="justify-between flex pt-3.5">
               <p className="font-Opensans font-normal text-base text-black">
                 Subtotal
               </p>
               <p className="font-nunitoFont font-normal text-base text-black">
-                Rs. 250,000.00
+                {totalPrice}
               </p>
             </div>
             <div className="justify-between flex pt-3.5">
@@ -55,7 +63,7 @@ const CheckOUtDetails = () => {
                 Total
               </p>
               <p className="font-nunitoFont font-bold text-2xl text-[#B88E2F]">
-                Rs. 250,000.00
+                Rs. {totalPrice}
               </p>
             </div>
             <p className="border w-full text-[#D9D9D9] mt-8 mb-6"></p>
